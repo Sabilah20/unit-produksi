@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <style>
+        .hero .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.hero .slide .image{
+    flex:1 1 40rem;
+}
+
+.hero .slide .image img{
+    width: 100%;
+}
+
+.hero .slide .content{
+    flex:1 1 40rem;
+    text-align: center;
+}
+
+.hero .slide .content span{
+    font-size: 2.5rem;
+    color: var(--light-color);
+}
+
+.hero .slide .content h3{
+    margin:1rem 0;
+    font-size: 6rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--yellow);
+}
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+
+        <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+                <div class="content">
+                    <h1>
+                       Welcome to website
+                       <br>
+                       Unit<span>Produksi</span> 
+                    </h1>
+                 </div>
+                 <br>
+                 <button type="button" class="btn"><a href="https://wa.me/+6289603155049">Contact Us</a></button>
+            
+                 <div class="gambar">
+                    <img src="pesan.png">
+                 </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>order online</span>
+                        <h3>putu ayu</h3>
+                        <a href="menu.html" class="btn">see menu</a>
+                    </div>
+                    <div class="image">
+                        <img src="food.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>order online</span>
+                        <h3>dessert box</h3>
+                        <a href="menu.html" class="btn">see menu</a>
+                    </div>
+                    <div class="image">
+                        <img src="eat.svg" alt="">
+                    </div>
+                </div>
+
+
+            </div>
+
+    <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+
+    <script>
+        var swiper = new Swiper(".hero-slider", {
+            loop:true,
+            grabCursor: true,
+            effect:"flip",
+            pagination: {
+                el: ".swiper-pagination",
+                clickable:true,
+            },
+        });
+    </script>
+
+</body>
+</html>
